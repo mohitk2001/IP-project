@@ -1,0 +1,58 @@
+.container{
+    background-image: url('https://images.pexels.com/photos/355321/pexels-photo-355321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    height: 100vh;
+    width: 100%;
+    z-index: -10;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s ease-in;
+}
+.title-container{
+    margin-top: 150px;
+    text-align: center;
+    justify-content: center;
+}
+.landing-title{
+    color: white;
+    font-family: 'Abril Fatface',cursive;
+    font-weight:400;
+    font-size: 100px;
+}
+.landing-subheader{
+    color: white;
+    /* font-family: 'Abril Fatface',cursive; */
+    font-family: 'Abril Fatface',cursive;
+    font-weight: 300;
+    font-size: 60px;
+    padding-bottom: 10px;
+}
+.landing-para{
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-weight:500;
+    padding-bottom: 40px;
+}
+.landing-btn{
+    text-decoration: none;
+    border: none;
+    height: 45px;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.253);
+/* box-shadow: 2px 0px 50px rgba(193, 193, 193, 0.25); */
+box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+backdrop-filter: blur(45px);
+-webkit-backdrop-filter: blur(10px);
+border-radius: 8px;
+z-index: 30;
+font-family: monospace;
+font-size: 15px;
+font-weight:normal;
+margin-right: 10px;
+margin-right: 10px;
+}
+.landing-btn:hover{
+    color: white;
+    transition: 0.3s ease;
+}

@@ -1,0 +1,207 @@
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: 0.5s ease-in opacity;
+}
+.bg.activeBg {
+  transition: 0.5s ease-in opacity;
+  opacity: 1;
+}
+
+.bg-overlay {
+  background-color: #0f0f0f99;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  position: absolute;
+}
+
+.bg img {
+  width: 100%;
+  background-position: center bottom;
+}
+
+.main {
+  display: grid;
+  width: 100%;
+  height: 450px;
+  justify-content: center;
+  align-content: center;
+  gap: 35px;
+}
+
+/* .audioButton {
+  background: none;
+  border: 2px #ffffffcc solid;
+  padding: 16px;
+  width: 130px;
+  border-radius: 2%;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-family: 'Barlow', 'Maven Pro', sans-serif;
+  cursor: pointer;
+}
+
+.audioButton:hover,
+.audioButton.active {
+  box-shadow: none;
+  color: #000;
+  background-color: #ffffffcc;
+  border: none;
+  width: 140px;
+  padding: 24px;
+  font-size: 17px;
+} */
+
+.player-options,
+.middleWrap {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.player-options {
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.middleWrap {
+  justify-content: center;
+}
+
+.audioSeek {
+  position: relative;
+  min-width: 120px;
+  margin: 0 50px;
+}
+
+.resetIcon {
+  padding-top: 5px;
+  width: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  position: absolute;
+  top: -1px;
+  right: -43px;
+}
+.resetIcon:hover {
+  transform: scale(1.1);
+  transition: all 0.1s ease-out;
+}
+
+/* playPauseBtn animation and styles */
+.playPauseBtn.playMode,
+.playPauseBtn.pauseMode {
+  width: 40px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: all 0.3s ease-out;
+  transform-origin: center;
+}
+
+.playIcon,
+.pauseIcon {
+  width: 40px;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transform: scale(0);
+}
+
+.playIcon {
+  transform-origin: left;
+}
+.pauseIcon {
+  transform-origin: right;
+}
+
+.playMode .playIcon {
+  opacity: 0;
+  transform: translateX(20px) rotateY(90deg) scale(1.1);
+  transition: all 0.3s ease-out;
+}
+.playMode .pauseIcon {
+  transform: translateX(20px) rotateY(0deg) scale(1.1);
+  transition: all 0.3s ease-out;
+}
+
+.pauseMode .playIcon {
+  transform: translateX(-20px) rotateY(0deg) scale(1.1);
+  transition: all 0.3s ease-out;
+}
+.pauseMode .pauseIcon {
+  opacity: 0;
+  transform: translateX(-20px) rotateY(-90deg) scale(1.1);
+  transition: all 0.3s ease-out;
+}
+
+.timerWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 10px;
+}
+
+.timer {
+  font-family: 'Barlow', 'Maven Pro', sans-serif;
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  color: white;
+}
+
+.timer .min,
+.timer .sec {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 32px;
+  color: white;
+}
+
+.volume-slider {
+  cursor: pointer;
+}
+
+.volume-icon {
+  filter: invert(100%);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.volume-icon:hover {
+  transition: all 0.1s ease-in;
+  transform: scale(1.1);
+}
